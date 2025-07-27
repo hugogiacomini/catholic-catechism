@@ -1,0 +1,59 @@
+{
+  "name": "catholic-catechism-interactive",
+  "version": "1.0.0",
+  "description": "Interactive platform for studying the Catechism of the Catholic Church with age-appropriate content in multiple languages",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server . -p 8000 -o",
+    "deploy": "bash deploy.sh",
+    "deploy-windows": "deploy.bat",
+    "validate": "node scripts/validate.js",
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "catholic",
+    "catechism",
+    "education",
+    "religious",
+    "multilingual",
+    "interactive",
+    "aws",
+    "s3",
+    "cloudfront"
+  ],
+  "author": "Catholic Catechism Interactive Platform",
+  "license": "See README.md for licensing information",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugogiacomini/catholic-catechism.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hugogiacomini/catholic-catechism/issues"
+  },
+  "homepage": "https://github.com/hugogiacomini/catholic-catechism#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie < 11"
+  ],
+  "files": [
+    "index.html",
+    "styles/",
+    "js/",
+    "assets/",
+    "cloudformation-template.yaml",
+    "deploy.sh",
+    "deploy.bat",
+    "README.md"
+  ]
+}
