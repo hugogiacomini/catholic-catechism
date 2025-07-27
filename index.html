@@ -16,26 +16,26 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="nav-brand">
-                    <h1>Catholic Catechism</h1>
-                    <p>Interactive Learning Platform</p>
+                    <h1 id="site-title">site_title</h1>
+                    <p id="site-subtitle">site_subtitle</p>
                 </div>
                 
                 <div class="nav-controls">
                     <div class="age-selector">
-                        <label for="age-group">Age Group:</label>
+                        <label for="age-group" id="age-group-label">age_group</label>
                         <select id="age-group" onchange="switchAgeGroup(this.value)">
-                            <option value="children">Children (6-12)</option>
-                            <option value="teens">Teens (13-17)</option>
-                            <option value="adults" selected>Adults (18+)</option>
+                            <option value="children" id="children-option">children</option>
+                            <option value="teens" id="teens-option">teens</option>
+                            <option value="adults" selected id="adults-option">adults</option>
                         </select>
                     </div>
                     
                     <div class="language-selector">
-                        <label for="language">Language:</label>
+                        <label for="language" id="language-label">language</label>
                         <select id="language" onchange="switchLanguage(this.value)">
-                            <option value="en" selected>English</option>
-                            <option value="pt">Português</option>
-                            <option value="la">Latin</option>
+                            <option value="en" selected>🇺🇸 English</option>
+                            <option value="pt">🇧🇷 Português</option>
+                            <option value="la">🇻🇦 Latin</option>
                         </select>
                     </div>
                 </div>
@@ -46,10 +46,9 @@
     <main class="main">
         <section class="intro-section">
             <div class="container">
-                <h2 id="welcome-title">Welcome to the Interactive Catechism</h2>
+                <h2 id="welcome-title">welcome_title</h2>
                 <p id="welcome-description">
-                    Explore the teachings of the Catholic Church through an interactive, age-appropriate platform. 
-                    The Catechism is organized into four main parts that guide us in understanding our faith.
+                    welcome_description
                 </p>
             </div>
         </section>
@@ -61,28 +60,28 @@
                         <div class="part-number">I</div>
                         <h3 id="part1-title">The Profession of Faith</h3>
                         <p id="part1-description">What we believe - The Creed, Scripture, and Tradition</p>
-                        <button class="explore-btn" onclick="showPart(1)">Explore</button>
+                        <button class="explore-btn" onclick="showPart(1)">explore</button>
                     </div>
                     
                     <div class="part-card" data-part="2">
                         <div class="part-number">II</div>
                         <h3 id="part2-title">The Celebration of the Christian Mystery</h3>
                         <p id="part2-description">How we worship - Liturgy and the Seven Sacraments</p>
-                        <button class="explore-btn" onclick="showPart(2)">Explore</button>
+                        <button class="explore-btn" onclick="showPart(2)">explore</button>
                     </div>
                     
                     <div class="part-card" data-part="3">
                         <div class="part-number">III</div>
                         <h3 id="part3-title">Life in Christ</h3>
                         <p id="part3-description">How we live - Moral teachings and the Ten Commandments</p>
-                        <button class="explore-btn" onclick="showPart(3)">Explore</button>
+                        <button class="explore-btn" onclick="showPart(3)">explore</button>
                     </div>
                     
                     <div class="part-card" data-part="4">
                         <div class="part-number">IV</div>
                         <h3 id="part4-title">Christian Prayer</h3>
                         <p id="part4-description">How we pray - The Our Father and forms of prayer</p>
-                        <button class="explore-btn" onclick="showPart(4)">Explore</button>
+                        <button class="explore-btn" onclick="showPart(4)">explore</button>
                     </div>
                 </div>
             </div>
@@ -91,7 +90,7 @@
         <section class="content-area" id="content-area" style="display: none;">
             <div class="container">
                 <div class="content-navigation">
-                    <button id="back-btn" onclick="goBack()">← Back to Overview</button>
+                    <button id="back-btn" onclick="goBack()">back_to_overview</button>
                     <div class="breadcrumb" id="breadcrumb"></div>
                 </div>
                 
@@ -104,8 +103,8 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Catholic Catechism Interactive Platform. Based on the official Catechism of the Catholic Church.</p>
-            <p><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank">Official Vatican Source</a></p>
+            <p id="copyright">copyright</p>
+            <p><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" id="official-source">official_source</a></p>
         </div>
     </footer>
 

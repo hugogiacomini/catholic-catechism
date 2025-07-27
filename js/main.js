@@ -72,11 +72,28 @@ function switchAgeGroup(ageGroup) {
 }
 
 function updateInterface() {
+    // Update HTML lang attribute
+    document.documentElement.lang = currentLanguage === 'pt' ? 'pt' : currentLanguage === 'la' ? 'la' : 'en';
+    
+    // Update page title
+    const siteTitle = getInterfaceText('site_title', currentLanguage);
+    const siteSubtitle = getInterfaceText('site_subtitle', currentLanguage);
+    document.title = `${siteTitle} - ${siteSubtitle}`;
+
     // Update interface text based on current language
     const elements = [
+        { id: 'site-title', key: 'site_title' },
+        { id: 'site-subtitle', key: 'site_subtitle' },
         { id: 'welcome-title', key: 'welcome_title' },
         { id: 'welcome-description', key: 'welcome_description' },
-        { id: 'back-btn', key: 'back_to_overview' }
+        { id: 'back-btn', key: 'back_to_overview' },
+        { id: 'age-group-label', key: 'age_group' },
+        { id: 'language-label', key: 'language' },
+        { id: 'children-option', key: 'children' },
+        { id: 'teens-option', key: 'teens' },
+        { id: 'adults-option', key: 'adults' },
+        { id: 'copyright', key: 'copyright' },
+        { id: 'official-source', key: 'official_source' }
     ];
 
     elements.forEach(element => {
@@ -104,16 +121,6 @@ function updateInterface() {
     const exploreButtons = document.querySelectorAll('.explore-btn');
     exploreButtons.forEach(btn => {
         btn.textContent = getInterfaceText('explore', currentLanguage);
-    });
-
-    // Update labels
-    const labels = document.querySelectorAll('label');
-    labels.forEach(label => {
-        if (label.getAttribute('for') === 'age-group') {
-            label.textContent = getInterfaceText('age_group', currentLanguage);
-        } else if (label.getAttribute('for') === 'language') {
-            label.textContent = getInterfaceText('language', currentLanguage);
-        }
     });
 }
 

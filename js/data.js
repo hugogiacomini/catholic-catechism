@@ -62,10 +62,151 @@ const catechismData = {
                             la: "Deus vult nos Eum cognoscere! Nobis ostendit quis sit per pulchrum mundum quem fecit."
                         }
                     }
+                },
+                {
+                    id: "s1-3",
+                    title: {
+                        en: "The Revelation of God",
+                        pt: "A Revelação de Deus",
+                        la: "Revelatio Dei"
+                    },
+                    content: {
+                        adults: {
+                            en: "God reveals His 'plan of loving goodness', conceived in Christ, from before the foundation of the world, in his eternal being as Father, Son, and Holy Spirit. This plan is a 'grace which was given to us in Christ Jesus before the ages began'.",
+                            pt: "Deus revela seu 'plano de bondade amorosa', concebido em Cristo, desde antes da fundação do mundo, em seu ser eterno como Pai, Filho e Espírito Santo. Este plano é uma 'graça que nos foi dada em Cristo Jesus antes dos tempos eternos'.",
+                            la: "Deus revelat suum 'consilium benevolentiae amantis', in Christo conceptum, ante mundi fundamenta, in suo aeterno esse ut Pater, Filius, et Spiritus Sanctus."
+                        },
+                        teens: {
+                            en: "God had a plan to show His love to us even before He created the world. This plan was centered on Jesus Christ, and it shows us that God is a Trinity - Father, Son, and Holy Spirit - who have always existed in perfect love.",
+                            pt: "Deus tinha um plano para mostrar Seu amor por nós mesmo antes de criar o mundo. Este plano estava centrado em Jesus Cristo, e nos mostra que Deus é uma Trindade - Pai, Filho e Espírito Santo - que sempre existiram em amor perfeito.",
+                            la: "Deus consilium habebat ad ostendendum amorem suum nobis etiam antequam mundum crearet."
+                        },
+                        children: {
+                            en: "Before God even made the world, He had a wonderful plan to show His love to everyone! This plan was all about sending Jesus to us. God is three persons in one - the Father, Jesus, and the Holy Spirit - and they all love us very much!",
+                            pt: "Antes mesmo de Deus fazer o mundo, Ele tinha um plano maravilhoso para mostrar Seu amor a todos! Este plano era todo sobre enviar Jesus para nós. Deus é três pessoas em uma - o Pai, Jesus e o Espírito Santo - e todos nos amam muito!",
+                            la: "Antequam Deus etiam mundum faceret, consilium mirabile habebat ad ostendendum amorem suum omnibus!"
+                        }
+                    }
+                },
+                {
+                    id: "s1-4",
+                    title: {
+                        en: "The Transmission of Divine Revelation",
+                        pt: "A Transmissão da Revelação Divina",
+                        la: "Transmissio Divinae Revelationis"
+                    },
+                    content: {
+                        adults: {
+                            en: "Christ the Lord in whom the full revelation of the supreme God is brought to completion, commissioned the Apostles to preach to all men that Gospel which is the source of all saving truth and moral teaching.",
+                            pt: "Cristo, o Senhor, em quem a revelação plena do Deus supremo é levada à perfeição, comissionou os Apóstolos a pregar a todos os homens aquele Evangelho que é a fonte de toda verdade salvífica e ensinamento moral.",
+                            la: "Christus Dominus in quo plena revelatio summi Dei ad perfectionem perducitur, Apostolos mandavit ut omnibus hominibus praedicarent Evangelium illud quod fons est omnis veritatis salvificae et disciplinae moralis."
+                        },
+                        teens: {
+                            en: "Jesus gave the Apostles the job of sharing the Gospel - the Good News - with everyone in the world. This Gospel contains all the truth we need for salvation and shows us how to live good lives.",
+                            pt: "Jesus deu aos Apóstolos a tarefa de compartilhar o Evangelho - as Boas Novas - com todos no mundo. Este Evangelho contém toda a verdade que precisamos para a salvação e nos mostra como viver vidas boas.",
+                            la: "Iesus Apostolis munus dedit communicandi Evangelium - Bonum Nuntium - cum omnibus in mundo."
+                        },
+                        children: {
+                            en: "Jesus told his special friends, the Apostles, to tell everyone in the world the Good News about God's love. This Good News teaches us how to be saved and how to be good people.",
+                            pt: "Jesus disse aos seus amigos especiais, os Apóstolos, para contar a todos no mundo as Boas Novas sobre o amor de Deus. Essas Boas Novas nos ensinam como ser salvos e como ser pessoas boas.",
+                            la: "Iesus suis amicis specialibus, Apostolis, dixit ut omnibus in mundo Bonum Nuntium de amore Dei narrarent."
+                        }
+                    }
                 }
             ]
         },
+        
         2: {
+            title: {
+                en: "The Profession of the Christian Faith",
+                pt: "A Profissão da Fé Cristã",
+                la: "Professio Fidei Christianae"
+            },
+            description: {
+                en: "The creeds and what Christians believe about God, Jesus Christ, and the Church",
+                pt: "Os credos e aquilo em que os cristãos acreditam sobre Deus, Jesus Cristo e a Igreja",
+                la: "Symbola et quae Christiani de Deo, Iesu Christo, et Ecclesia credunt"
+            },
+            sections: [
+                {
+                    id: "s2-1",
+                    title: {
+                        en: "I Believe in God the Father",
+                        pt: "Creio em Deus Pai",
+                        la: "Credo in Deum Patrem"
+                    },
+                    content: {
+                        adults: {
+                            en: "We believe in one God, the Father Almighty, maker of heaven and earth, of all things visible and invisible. God is the source of all existence, the first cause and final end of all things.",
+                            pt: "Cremos em um só Deus, Pai Todo-Poderoso, criador do céu e da terra, de todas as coisas visíveis e invisíveis. Deus é a fonte de toda existência, a primeira causa e fim último de todas as coisas.",
+                            la: "Credimus in unum Deum, Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium. Deus fons est omnis existentiae, prima causa et finis ultimus omnium rerum."
+                        },
+                        teens: {
+                            en: "Christians believe in one God who is like a perfect Father to us. He created everything - the whole universe, everything we can see and even things we can't see. God is the beginning and end of everything.",
+                            pt: "Os cristãos acreditam em um Deus que é como um Pai perfeito para nós. Ele criou tudo - todo o universo, tudo que podemos ver e até coisas que não podemos ver. Deus é o começo e o fim de tudo.",
+                            la: "Christiani credunt in unum Deum qui est sicut perfectus Pater nobis."
+                        },
+                        children: {
+                            en: "God is our loving Father in heaven! He made everything - the stars, the moon, the earth, and you and me. God made everything because He loves us. He takes care of us like the best daddy ever!",
+                            pt: "Deus é nosso Pai amoroso no céu! Ele fez tudo - as estrelas, a lua, a terra, e você e eu. Deus fez tudo porque Ele nos ama. Ele cuida de nós como o melhor papai de todos!",
+                            la: "Deus est noster amans Pater in caelo! Omnia fecit - stellas, lunam, terram, et te et me."
+                        }
+                    }
+                },
+                {
+                    id: "s2-2",
+                    title: {
+                        en: "I Believe in Jesus Christ",
+                        pt: "Creio em Jesus Cristo",
+                        la: "Credo in Iesum Christum"
+                    },
+                    content: {
+                        adults: {
+                            en: "We believe in one Lord Jesus Christ, the Only Begotten Son of God, born of the Father before all ages. God from God, Light from Light, true God and true man, who for us and for our salvation came down from heaven.",
+                            pt: "Cremos em um só Senhor Jesus Cristo, Filho Unigênito de Deus, nascido do Pai antes de todos os séculos. Deus de Deus, Luz da Luz, verdadeiro Deus e verdadeiro homem, que por nós e para nossa salvação desceu do céu.",
+                            la: "Credimus in unum Dominum Iesum Christum, Filium Dei unigenitum, ex Patre natum ante omnia saecula. Deum de Deo, Lumen de Lumine, Deum verum et hominem verum, qui propter nos et propter nostram salutem descendit de caelis."
+                        },
+                        teens: {
+                            en: "Jesus Christ is God's only Son, who has always existed with the Father. He is fully God and fully human at the same time. Jesus came down from heaven to save us and show us God's love.",
+                            pt: "Jesus Cristo é o único Filho de Deus, que sempre existiu com o Pai. Ele é totalmente Deus e totalmente humano ao mesmo tempo. Jesus desceu do céu para nos salvar e mostrar o amor de Deus.",
+                            la: "Iesus Christus est unicus Filius Dei, qui semper cum Patre exstitit."
+                        },
+                        children: {
+                            en: "Jesus is God's special Son! He came from heaven to earth to be with us and to save us. Jesus is both God and a person like us, but He never did anything wrong. He loves us so much!",
+                            pt: "Jesus é o Filho especial de Deus! Ele veio do céu para a terra para estar conosco e nos salvar. Jesus é tanto Deus quanto uma pessoa como nós, mas Ele nunca fez nada de errado. Ele nos ama muito!",
+                            la: "Iesus est specialis Filius Dei! De caelo ad terram venit ut nobiscum esset et nos salvaret."
+                        }
+                    }
+                },
+                {
+                    id: "s2-3",
+                    title: {
+                        en: "I Believe in the Holy Spirit",
+                        pt: "Creio no Espírito Santo",
+                        la: "Credo in Spiritum Sanctum"
+                    },
+                    content: {
+                        adults: {
+                            en: "We believe in the Holy Spirit, the Lord, the giver of life, who proceeds from the Father and the Son, who with the Father and the Son is adored and glorified, who has spoken through the prophets.",
+                            pt: "Cremos no Espírito Santo, Senhor que dá a vida, e procede do Pai e do Filho, e com o Pai e o Filho é adorado e glorificado, e falou pelos profetas.",
+                            la: "Credimus in Spiritum Sanctum, Dominum et vivificantem, qui ex Patre Filioque procedit, qui cum Patre et Filio simul adoratur et conglorificatur, qui locutus est per prophetas."
+                        },
+                        teens: {
+                            en: "The Holy Spirit is God too, just like the Father and Jesus. The Holy Spirit gives us life and helps us understand God. He spoke through the prophets in the Bible and continues to guide the Church today.",
+                            pt: "O Espírito Santo também é Deus, assim como o Pai e Jesus. O Espírito Santo nos dá vida e nos ajuda a entender Deus. Ele falou através dos profetas na Bíblia e continua a guiar a Igreja hoje.",
+                            la: "Spiritus Sanctus etiam Deus est, sicut Pater et Iesus."
+                        },
+                        children: {
+                            en: "The Holy Spirit is God's love that lives in our hearts! He helps us pray, helps us be good, and helps us know that God loves us. The Holy Spirit is like God's special helper who is always with us.",
+                            pt: "O Espírito Santo é o amor de Deus que vive em nossos corações! Ele nos ajuda a orar, nos ajuda a ser bons, e nos ajuda a saber que Deus nos ama. O Espírito Santo é como o ajudante especial de Deus que está sempre conosco.",
+                            la: "Spiritus Sanctus est amor Dei qui in cordibus nostris vivit!"
+                        }
+                    }
+                }
+            ]
+        },
+        
+        3: {
             title: {
                 en: "The Celebration of the Christian Mystery",
                 pt: "A Celebração do Mistério Cristão",
@@ -158,25 +299,75 @@ const catechismData = {
                 {
                     id: "s4-1",
                     title: {
-                        en: "The Lord's Prayer",
-                        pt: "A Oração do Senhor",
-                        la: "Oratio Dominica"
+                        en: "What is Prayer?",
+                        pt: "O que é Oração?",
+                        la: "Quid est Oratio?"
                     },
                     content: {
                         adults: {
-                            en: "The Lord's Prayer is truly the summary of the whole gospel. It is the most perfect of prayers. Jesus gave it to us in response to his disciples' request: 'Lord, teach us to pray.'",
-                            pt: "A Oração do Senhor é verdadeiramente o resumo de todo o evangelho. É a mais perfeita das orações. Jesus nos deu em resposta ao pedido de seus discípulos: 'Senhor, ensina-nos a orar.'",
-                            la: "Oratio Dominica vere summarium totius evangelii est. Est perfectissima orationum. Iesus eam nobis dedit in responsum petitioni discipulorum suorum."
+                            en: "Prayer is the raising of one's mind and heart to God or the requesting of good things from God. It is a vital and personal relationship with the living and true God.",
+                            pt: "A oração é a elevação da mente e do coração a Deus ou o pedido de coisas boas a Deus. É uma relação vital e pessoal com o Deus vivo e verdadeiro.",
+                            la: "Oratio est elevatio mentis et cordis ad Deum vel petitio bonorum a Deo. Est relatio vitalis et personalis cum Deo vivo et vero."
                         },
                         teens: {
-                            en: "When Jesus' followers asked Him to teach them to pray, He gave them the Our Father. This prayer contains everything we need - it praises God, asks for what we need, and helps us forgive others.",
-                            pt: "Quando os seguidores de Jesus pediram para Ele ensiná-los a orar, Ele lhes deu o Pai Nosso. Esta oração contém tudo que precisamos - louva Deus, pede o que precisamos, e nos ajuda a perdoar outros.",
-                            la: "Cum sequaces Iesu ab Eo petierunt ut eos orare doceret, eis Pater Noster dedit."
+                            en: "Prayer is basically talking to God - sharing your thoughts, feelings, thanks, and requests with Him. It's like having a conversation with your best friend who always listens and cares about you.",
+                            pt: "A oração é basicamente falar com Deus - compartilhar seus pensamentos, sentimentos, agradecimentos e pedidos com Ele. É como ter uma conversa com seu melhor amigo que sempre escuta e se importa com você.",
+                            la: "Oratio fundamentaliter est colloquium cum Deo - communicatio cogitationum, sensuum, gratiarum, et petitionum cum Eo."
                         },
                         children: {
-                            en: "Jesus taught us the perfect prayer - the Our Father! When you pray this prayer, you're talking to God just like Jesus showed us. It's like having a special conversation with your heavenly Father!",
-                            pt: "Jesus nos ensinou a oração perfeita - o Pai Nosso! Quando você ora esta oração, você está falando com Deus exatamente como Jesus nos mostrou. É como ter uma conversa especial com seu Pai celestial!",
-                            la: "Iesus nos orationem perfectam docuit - Pater Noster!"
+                            en: "Prayer is talking to God! You can tell God anything - when you're happy, sad, scared, or thankful. God always listens to you and loves to hear from you, just like a loving parent!",
+                            pt: "Oração é falar com Deus! Você pode contar tudo para Deus - quando está feliz, triste, com medo ou agradecido. Deus sempre te escuta e ama ouvir de você, como um pai amoroso!",
+                            la: "Oratio est colloquium cum Deo! Omnia Deo dicere potes - cum laetus es, tristis, timidus, vel gratus."
+                        }
+                    }
+                },
+                {
+                    id: "s4-2",
+                    title: {
+                        en: "The Our Father",
+                        pt: "O Pai Nosso",
+                        la: "Pater Noster"
+                    },
+                    content: {
+                        adults: {
+                            en: "The Lord's Prayer is truly the summary of the whole gospel. When Jesus gave us the Our Father, he taught us not only how to ask, but also how to receive what we need.",
+                            pt: "A Oração do Senhor é verdadeiramente o resumo de todo o evangelho. Quando Jesus nos deu o Pai Nosso, ele nos ensinou não apenas como pedir, mas também como receber o que precisamos.",
+                            la: "Oratio Domini vere est summarium totius evangelii. Cum Iesus nobis Pater Noster dedit, nos docuit non solum quomodo petere, sed etiam quomodo recipere quae opus habemus."
+                        },
+                        teens: {
+                            en: "The Our Father is the perfect prayer that Jesus himself taught us. It covers everything we need: praising God, asking for our needs, seeking forgiveness, and protection from evil.",
+                            pt: "O Pai Nosso é a oração perfeita que o próprio Jesus nos ensinou. Ela cobre tudo que precisamos: louvar Deus, pedir nossas necessidades, buscar perdão e proteção do mal.",
+                            la: "Pater Noster est perfecta oratio quam ipse Iesus nos docuit."
+                        },
+                        children: {
+                            en: "Jesus taught us a special prayer called the Our Father. It's like a perfect recipe for talking to God - we praise Him, ask for what we need, say sorry, and ask Him to keep us safe!",
+                            pt: "Jesus nos ensinou uma oração especial chamada Pai Nosso. É como uma receita perfeita para falar com Deus - nós O louvamos, pedimos o que precisamos, pedimos desculpas e pedimos para Ele nos manter seguros!",
+                            la: "Iesus nos orationem specialem docuit quae Pater Noster appellatur."
+                        }
+                    }
+                },
+                {
+                    id: "s4-3",
+                    title: {
+                        en: "Forms of Prayer",
+                        pt: "Formas de Oração",
+                        la: "Formae Orationis"
+                    },
+                    content: {
+                        adults: {
+                            en: "There are five basic forms of prayer: blessing and adoration, petition, intercession, thanksgiving, and praise. Each expresses a different aspect of our relationship with God.",
+                            pt: "Há cinco formas básicas de oração: bênção e adoração, petição, intercessão, ação de graças e louvor. Cada uma expressa um aspecto diferente de nossa relação com Deus.",
+                            la: "Quinque formae fundamentales orationis sunt: benedictio et adoratio, petitio, intercessio, gratiarum actio, et laus."
+                        },
+                        teens: {
+                            en: "Prayer isn't just asking for stuff! We can praise God for who He is, thank Him for what He's done, ask for help, pray for others, and simply worship Him because He's awesome.",
+                            pt: "Oração não é apenas pedir coisas! Podemos louvar Deus por quem Ele é, agradecê-Lo pelo que fez, pedir ajuda, orar pelos outros, e simplesmente adorá-Lo porque Ele é incrível.",
+                            la: "Oratio non est tantum petere res! Deum laudare possumus propter quem est."
+                        },
+                        children: {
+                            en: "There are lots of ways to pray! We can say 'Thank you, God!' for good things, ask God to help people, tell God how wonderful He is, and ask for what we need. God loves all our prayers!",
+                            pt: "Há muitas maneiras de orar! Podemos dizer 'Obrigado, Deus!' pelas coisas boas, pedir a Deus para ajudar as pessoas, dizer a Deus como Ele é maravilhoso, e pedir o que precisamos. Deus ama todas as nossas orações!",
+                            la: "Multi modi orandi sunt! 'Gratias tibi, Deus!' dicere possumus pro rebus bonis."
                         }
                     }
                 }

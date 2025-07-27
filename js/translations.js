@@ -2,6 +2,8 @@
 const translations = {
     interface: {
         en: {
+            site_title: "Catholic Catechism",
+            site_subtitle: "Interactive Learning Platform",
             welcome_title: "Welcome to the Interactive Catechism",
             welcome_description: "Explore the teachings of the Catholic Church through an interactive, age-appropriate platform. The Catechism is organized into four main parts that guide us in understanding our faith.",
             explore: "Explore",
@@ -15,6 +17,8 @@ const translations = {
             official_source: "Official Vatican Source"
         },
         pt: {
+            site_title: "Catecismo Católico",
+            site_subtitle: "Plataforma Interativa de Aprendizagem",
             welcome_title: "Bem-vindos ao Catecismo Interativo",
             welcome_description: "Explore os ensinamentos da Igreja Católica através de uma plataforma interativa e adequada à idade. O Catecismo está organizado em quatro partes principais que nos guiam na compreensão de nossa fé.",
             explore: "Explorar",
@@ -28,6 +32,8 @@ const translations = {
             official_source: "Fonte Oficial do Vaticano"
         },
         la: {
+            site_title: "Catechismus Catholicus",
+            site_subtitle: "Platforma Interactiva Discendi",
             welcome_title: "Salve ad Catechismum Interactivum",
             welcome_description: "Explora doctrinas Ecclesiae Catholicae per platformam interactivam et aetati aptam. Catechismus in quattuor partes principales organizatur quae nos in fide nostra intelligenda ducunt.",
             explore: "Explora",
@@ -172,12 +178,12 @@ const translations = {
 // Function to get translated text
 function getTranslation(category, key, language = 'en') {
     try {
-        if (translations[category] && translations[category][key] && translations[category][key][language]) {
-            return translations[category][key][language];
+        if (translations[category] && translations[category][language] && translations[category][language][key]) {
+            return translations[category][language][key];
         }
         // Fallback to English if translation not found
-        if (language !== 'en' && translations[category] && translations[category][key] && translations[category][key]['en']) {
-            return translations[category][key]['en'];
+        if (language !== 'en' && translations[category] && translations[category]['en'] && translations[category]['en'][key]) {
+            return translations[category]['en'][key];
         }
         return key; // Return key if no translation found
     } catch (error) {
