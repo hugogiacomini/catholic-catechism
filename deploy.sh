@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Deployment script for Catholic Catechism website to AWS S3
-# Usage: ./deploy.sh [bucket-name] [cloudfront-distribution-id]
+# Usage: ./deploy.sh [bucket-name]
 
 set -e
 
@@ -77,14 +77,7 @@ deploy_infrastructure() {
             --output text \
             --region $DEFAULT_REGION)
         
-        local cloudfront_id=$(aws cloudformation describe-stacks \
-            --stack-name $stack_name \
-            --query 'Stacks[0].Outputs[?OutputKey==`CloudFrontDistributionId`].OutputValue' \
-            --output text \
-            --region $DEFAULT_REGION)
-        
         echo "WEBSITE_URL=$website_url" > .env
-        echo "CLOUDFRONT_DISTRIBUTION_ID=$cloudfront_id" >> .env
         echo "S3_BUCKET_NAME=$bucket_name" >> .env
         
         print_status "Website URL: $website_url"
@@ -129,21 +122,6 @@ upload_to_s3() {
     print_status "Files uploaded successfully!"
 }
 
-# Function to invalidate CloudFront cache
-invalidate_cloudfront() {
-    local distribution_id=$1
-    
-    if [ ! -z "$distribution_id" ]; then
-        print_status "Creating CloudFront invalidation..."
-        
-        aws cloudfront create-invalidation \
-            --distribution-id $distribution_id \
-            --paths "/*"
-        
-        print_status "CloudFront invalidation created!"
-    fi
-}
-
 # Function to verify deployment
 verify_deployment() {
     local website_url=$1
@@ -165,7 +143,6 @@ verify_deployment() {
 # Main deployment function
 main() {
     local bucket_name=${1:-$DEFAULT_BUCKET}
-    local cloudfront_distribution_id=$2
     
     print_status "Starting deployment of Catholic Catechism website..."
     print_status "Bucket name: $bucket_name"
@@ -177,22 +154,11 @@ main() {
     check_aws_cli
     check_aws_credentials
     
-    # Deploy infrastructure if CloudFront distribution ID is not provided
-    if [ -z "$cloudfront_distribution_id" ]; then
-        deploy_infrastructure $bucket_name
-        
-        # Load environment variables
-        if [ -f ".env" ]; then
-            source .env
-            cloudfront_distribution_id=$CLOUDFRONT_DISTRIBUTION_ID
-        fi
-    fi
+    # Deploy infrastructure
+    deploy_infrastructure $bucket_name
     
     # Upload files
     upload_to_s3 $bucket_name
-    
-    # Invalidate CloudFront cache
-    invalidate_cloudfront $cloudfront_distribution_id
     
     # Load website URL for verification
     if [ -f ".env" ]; then
@@ -207,20 +173,18 @@ main() {
 
 # Show usage if help is requested
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
-    echo "Usage: $0 [bucket-name] [cloudfront-distribution-id]"
+    echo "Usage: $0 [bucket-name]"
     echo ""
     echo "Parameters:"
     echo "  bucket-name              S3 bucket name (default: $DEFAULT_BUCKET)"
-    echo "  cloudfront-distribution-id    CloudFront Distribution ID (optional)"
     echo ""
     echo "Examples:"
     echo "  $0                                    # Deploy with default bucket name"
     echo "  $0 my-catechism-bucket               # Deploy with custom bucket name"
-    echo "  $0 my-bucket E1234567890123          # Deploy to existing infrastructure"
     echo ""
     echo "Prerequisites:"
     echo "  - AWS CLI installed and configured"
-    echo "  - Appropriate AWS permissions for S3, CloudFormation, and CloudFront"
+    echo "  - Appropriate AWS permissions for S3 and CloudFormation"
     exit 0
 fi
 

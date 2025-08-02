@@ -4,13 +4,13 @@
 .children-activities {
     margin-top: 2rem;
     padding: 2rem;
-    background: linear-gradient(135deg, #BFAB99, #A68365);
+    background: linear-gradient(135deg, #FFF9E6, #FFE4B5);
     border-radius: 15px;
-    border: 3px solid #538EA6;
+    border: 3px solid #FFD700;
 }
 
 .children-activities h3 {
-    color: #1E2D40;
+    color: #FF6B35;
     font-family: var(--font-secondary);
     text-align: center;
     margin-bottom: 1.5rem;

@@ -1,6 +1,6 @@
 @echo off
 REM Windows deployment script for Catholic Catechism website to AWS S3
-REM Usage: deploy.bat [bucket-name] [cloudfront-distribution-id]
+REM Usage: deploy.bat [bucket-name]
 
 setlocal enabledelayedexpansion
 
@@ -11,8 +11,6 @@ set DEFAULT_REGION=us-east-1
 REM Get parameters
 set BUCKET_NAME=%1
 if "%BUCKET_NAME%"=="" set BUCKET_NAME=%DEFAULT_BUCKET%
-
-set CLOUDFRONT_DISTRIBUTION_ID=%2
 
 echo [INFO] Starting deployment of Catholic Catechism website...
 echo [INFO] Bucket name: %BUCKET_NAME%
@@ -51,15 +49,12 @@ if "%CLOUDFRONT_DISTRIBUTION_ID%"=="" (
     
     REM Get outputs
     for /f "tokens=*" %%i in ('aws cloudformation describe-stacks --stack-name catholic-catechism-stack --query "Stacks[0].Outputs[?OutputKey==`WebsiteURL`].OutputValue" --output text --region %DEFAULT_REGION%') do set WEBSITE_URL=%%i
-    for /f "tokens=*" %%i in ('aws cloudformation describe-stacks --stack-name catholic-catechism-stack --query "Stacks[0].Outputs[?OutputKey==`CloudFrontDistributionId`].OutputValue" --output text --region %DEFAULT_REGION%') do set CLOUDFRONT_DISTRIBUTION_ID=%%i
     
     REM Save to environment file
     echo WEBSITE_URL=!WEBSITE_URL! > .env
-    echo CLOUDFRONT_DISTRIBUTION_ID=!CLOUDFRONT_DISTRIBUTION_ID! >> .env
     echo S3_BUCKET_NAME=%BUCKET_NAME% >> .env
     
     echo [INFO] Website URL: !WEBSITE_URL!
-    echo [INFO] CloudFront Distribution ID: !CLOUDFRONT_DISTRIBUTION_ID!
 )
 
 REM Upload files to S3
@@ -91,17 +86,6 @@ if exist "assets" (
 )
 
 echo [INFO] Files uploaded successfully!
-
-REM Invalidate CloudFront cache
-if not "%CLOUDFRONT_DISTRIBUTION_ID%"=="" (
-    echo [INFO] Creating CloudFront invalidation...
-    
-    aws cloudfront create-invalidation ^
-        --distribution-id %CLOUDFRONT_DISTRIBUTION_ID% ^
-        --paths "/*"
-    
-    echo [INFO] CloudFront invalidation created!
-)
 
 REM Load environment variables if available
 if exist ".env" (
